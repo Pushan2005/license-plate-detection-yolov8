@@ -1,0 +1,7 @@
+ !pip install roboflow -q
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="fT9GqpCRoZ4TVVfhRx7p")
+project = rf.workspace("mochoye").project("license-plate-detector-ogxxg")
+version = project.version(2)
+dataset = version.download("yolov8")
